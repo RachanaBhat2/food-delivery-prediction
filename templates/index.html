@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+{% block body %}
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="/static/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-lg-7">
+                                    <h1 class="display-2 mb-5 animated slideInDown">Predict Food Delivery Time Accurately</h1>
+                                    <a href="/predict"
+                                       class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Predict now</a>
+                                    <a href="#about"
+                                       class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="/static/img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-lg-7">
+                                    <h1 class="display-2 mb-5 animated slideInDown">Smart Logistics for Faster Deliveries</h1>
+                                    <a href="#prediction-form"
+                                       class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Predict Time</a>
+                                    <a href="#features"
+                                       class="btn btn-secondary rounded-pill py-sm-3 px-sm-5 ms-3">Features</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    <!-- About Start -->
+    <div class="container-xxl py-5" id="about">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                        <img class="img-fluid w-100" src="/static/img/about.jpg">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-5 mb-4">Smart Delivery Time Estimation</h1>
+                    <p class="mb-4">
+                        Our advanced regression model analyzes multiple real-time variables to provide highly accurate food delivery estimates. By leveraging machine learning, we help logistics providers and customers plan better by predicting delays before they happen.
+                    </p>
+                    <p>
+                        <i class="fa fa-check text-primary me-3"></i>Real-time Traffic & Weather Analysis
+                    </p>
+                    <p>
+                        <i class="fa fa-check text-primary me-3"></i>Courier Experience & Vehicle Optimization
+                    </p>
+                    <p>
+                        <i class="fa fa-check text-primary me-3"></i>Data-Driven Preparation Time Insights
+                    </p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Explore Technology</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light bg-icon my-5 py-6" id="features">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp"
+                 data-wow-delay="0.1s"
+                 style="max-width: 500px">
+                <h1 class="display-5 mb-3">Key Prediction Factors</h1>
+                <p>
+                    Our model processes various real-world constraints to ensure every delivery estimate is backed by data and precision.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="/static/img/icon-1.png" alt="">
+                        <h4 class="mb-3">Environmental Intelligence</h4>
+                        <p class="mb-4">
+                            Calculates the impact of weather conditions like Rain or Snow and real-time traffic levels on your delivery route.
+                        </p>
+                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill"
+                           href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="/static/img/icon-2.png" alt="">
+                        <h4 class="mb-3">Courier Expertise</h4>
+                        <p class="mb-4">
+                            Factors in the courier's years of experience and vehicle type to adjust travel time and navigation efficiency.
+                        </p>
+                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill"
+                           href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="/static/img/icon-3.png" alt="">
+                        <h4 class="mb-3">Kitchen Readiness</h4>
+                        <p class="mb-4">Integrates food preparation time to provide a complete end-to-end timeline from order to doorstep.</p>
+                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill"
+                           href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+    <!-- Product Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0 gx-5 align-items-end">
+                <div class="col-lg-6">
+                    <div class="section-header text-start mb-5 wow fadeInUp"
+                         data-wow-delay="0.1s"
+                         style="max-width: 500px">
+                        <h1 class="display-5 mb-3">Key Features</h1>
+                        <p>
+                            Leveraging advanced machine learning and real-time data to provide actionable insights for better decision-making.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-start text-lg-end wow slideInRight"
+                     data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                        <li class="nav-item me-2">
+                            <a class="btn btn-outline-primary border-2 active"
+                               data-bs-toggle="pill"
+                               href="#tab-1">Forecasting</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="btn btn-outline-primary border-2"
+                               data-bs-toggle="pill"
+                               href="#tab-2">Analysis</a>
+                        </li>
+                        <li class="nav-item me-0">
+                            <a class="btn btn-outline-primary border-2"
+                               data-bs-toggle="pill"
+                               href="#tab-3">Recommendations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden text-center py-5">
+                                    <i class="fa fa-cloud-sun fa-5x text-primary"></i>
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Real-time Weather</a>
+                                    <p>Get instantaneous updates on temperature, humidity, and atmospheric pressure.</p>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-100 text-center py-2">
+                                        <a class="text-body" href=""><i class="fa fa-arrow-right text-primary me-2"></i>Explore Dashboard</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden text-center py-5">
+                                    <i class="fa fa-chart-line fa-5x text-primary"></i>
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Predictive Trends</a>
+                                    <p>Utilizing historical data to forecast upcoming conditions with high accuracy.</p>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-100 text-center py-2">
+                                        <a class="text-body" href=""><i class="fa fa-arrow-right text-primary me-2"></i>View Analysis</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden text-center py-5">
+                                    <i class="fa fa-seedling fa-5x text-primary"></i>
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Crop Advisory</a>
+                                    <p>Smart suggestions for optimal planting based on localized environmental data.</p>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-100 text-center py-2">
+                                        <a class="text-body" href=""><i class="fa fa-arrow-right text-primary me-2"></i>Get Advice</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="position-relative bg-light overflow-hidden text-center py-5">
+                                    <i class="fa fa-seedling fa-5x text-primary"></i>
+                                </div>
+                                <div class="text-center p-4">
+                                    <a class="d-block h5 mb-2" href="">Risk Assessment</a>
+                                    <p>Early warning systems for extreme conditions to minimize potential loss.</p>
+                                </div>
+                                <div class="d-flex border-top">
+                                    <small class="w-100 text-center py-2">
+                                        <a class="text-body" href=""><i class="fa fa-arrow-right text-primary me-2"></i>Security Info</a>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product End -->
+    <!-- Firm Visit Start -->
+    <div class="container-fluid bg-primary bg-icon mt-5 py-6">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-7 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="display-5 text-white mb-3">Explore Real-Time Analytics</h1>
+                    <p class="text-white mb-0">
+                        Dive deep into our interactive dashboard to visualize historical trends and live data processing. Our system uses advanced regression models and machine learning to provide precise environmental forecasts, helping you make informed decisions based on accurate data patterns.
+                    </p>
+                </div>
+                <div class="col-md-5 text-md-end wow fadeIn" data-wow-delay="0.5s">
+                    <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5"
+                       href="#dashboard">View Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Firm Visit End -->
+    <!-- Blog Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp"
+                 data-wow-delay="0.1s"
+                 style="max-width: 500px">
+                <h1 class="display-5 mb-3">Project Insights</h1>
+                <p>
+                    Our platform combines robust data engineering with advanced predictive modeling to deliver reliable environmental intelligence.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-light p-0">
+                        <div class="position-relative overflow-hidden"
+                             style="height: 250px;
+                                    background: #e9ecef;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center">
+                            <i class="fa fa-database fa-5x text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <a class="d-block h5 lh-base mb-3" href="">Advanced Data Integration</a>
+                            <p class="text-body mb-4">
+                                Processing diverse datasets from live weather APIs and historical records to ensure high-fidelity inputs for our models.
+                            </p>
+                            <div class="text-muted border-top pt-4">
+                                <small class="me-3"><i class="fa fa-microchip text-primary me-2"></i>Backend</small>
+                                <small class="me-3"><i class="fa fa-check-circle text-primary me-2"></i>Verified</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-light p-0">
+                        <div class="position-relative overflow-hidden"
+                             style="height: 250px;
+                                    background: #e9ecef;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center">
+                            <i class="fa fa-brain fa-5x text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <a class="d-block h5 lh-base mb-3" href="">Predictive Modeling</a>
+                            <p class="text-body mb-4">
+                                Utilizing regression analysis and SVM classification to forecast trends and identify potential environmental risks early.
+                            </p>
+                            <div class="text-muted border-top pt-4">
+                                <small class="me-3"><i class="fa fa-code text-primary me-2"></i>ML Engine</small>
+                                <small class="me-3"><i class="fa fa-bolt text-primary me-2"></i>Optimized</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light p-0">
+                        <div class="position-relative overflow-hidden"
+                             style="height: 250px;
+                                    background: #e9ecef;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center">
+                            <i class="fa fa-chart-pie fa-5x text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <a class="d-block h5 lh-base mb-3" href="">Interactive Visualization</a>
+                            <p class="text-body mb-4">
+                                Presenting complex technical data through intuitive charts and dashboards for seamless user interaction and monitoring.
+                            </p>
+                            <div class="text-muted border-top pt-4">
+                                <small class="me-3"><i class="fa fa-desktop text-primary me-2"></i>Frontend</small>
+                                <small class="me-3"><i class="fa fa-sync text-primary me-2"></i>Live Updates</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+{% endblock body %}

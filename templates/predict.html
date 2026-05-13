@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block body %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-3 animated slideInDown">Predict</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a class="text-body" href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">Predict</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <div class="container-xxl py-6">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp"
+                 data-wow-delay="0.1s"
+                 style="max-width: 600px">
+                <h1 class="display-5 mb-3">Delivery Time Predictor</h1>
+                <p>
+                    Input the order details below. Our regression model will analyze the variables to provide an estimated delivery time in minutes.
+                </p>
+            </div>
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form action="/predict" method="post">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="number"
+                                           step="0.1"
+                                           class="form-control"
+                                           id="distance"
+                                           name="distance"
+                                           placeholder="Distance (km)"
+                                           required>
+                                    <label for="distance">Distance (km)</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="t_level" name="t_level" required>
+                                        <option value="Low">Low</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="High">High</option>
+                                    </select>
+                                    <label for="t_level">Traffic Level</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="number"
+                                           class="form-control"
+                                           id="p_time"
+                                           name="p_time"
+                                           placeholder="Preparation Time (min)"
+                                           required>
+                                    <label for="p_time">Preparation Time (min)</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="number"
+                                           step="0.1"
+                                           class="form-control"
+                                           id="experience"
+                                           name="experience"
+                                           placeholder="Courier Experience (years)"
+                                           required>
+                                    <label for="experience">Courier Experience (years)</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="weather" name="weather" required>
+                                        <option value="Clear">Clear</option>
+                                        <option value="Foggy">Foggy</option>
+                                        <option value="Rainy">Rainy</option>
+                                        <option value="Snowy">Snowy</option>
+                                        <option value="Windy">Windy</option>
+                                    </select>
+                                    <label for="weather">Weather Type</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="time" name="time" required>
+                                        <option value="Morning">Morning</option>
+                                        <option value="Afternoon">Afternoon</option>
+                                        <option value="Evening">Evening</option>
+                                        <option value="Night">Night</option>
+                                    </select>
+                                    <label for="time">Time of Day</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select" id="vehicle" name="vehicle" required>
+                                        <option value="Bike">Bike</option>
+                                        <option value="Car">Car</option>
+                                        <option value="Scooter">Scooter</option>
+                                    </select>
+                                    <label for="vehicle">Vehicle Type</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Predict Delivery Time</button>
+                            </div>
+                        </div>
+                    </form>
+                    {% if prediction_text %}
+                        <div class="mt-5 p-4 bg-light rounded-3 border-start border-5 border-primary wow fadeInUp"
+                             data-wow-delay="0.1s">
+                            <h4 class="text-primary">Prediction Result:</h4>
+                            <p class="display-6 mb-0">{{ prediction_text }}</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

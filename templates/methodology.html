@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block body %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-3 animated slideInDown">Methodology</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a class="text-body" href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">Methodology</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light bg-icon py-6">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp"
+                 data-wow-delay="0.1s"
+                 style="max-width: 600px">
+                <h1 class="display-5 mb-3">Project Methodology</h1>
+                <p>A step-by-step overview of the technical journey from raw data to a fully deployed predictive web application.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                             style="width: 90px;
+                                    height: 90px">
+                            <i class="fa fa-file-csv fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3">1. Data Collection</h4>
+                        <p class="mb-0">
+                            Gathering historical delivery logs including distance, weather metrics, traffic levels, and courier performance details from reliable datasets.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                             style="width: 90px;
+                                    height: 90px">
+                            <i class="fa fa-broom fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3">2. Preprocessing</h4>
+                        <p class="mb-0">
+                            Cleaning the data by handling missing values, encoding categorical variables (Weather, Time of Day), and scaling numerical features for model stability.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                             style="width: 90px;
+                                    height: 90px">
+                            <i class="fa fa-chart-area fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3">3. EDA & Insights</h4>
+                        <p class="mb-0">
+                            Analyzing correlations between features—such as how heavy rain or peak traffic hours statistically impact the final delivery time.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                             style="width: 90px;
+                                    height: 90px">
+                            <i class="fa fa-brain fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3">4. Model Training</h4>
+                        <p class="mb-0">
+                            Implementing Regression algorithms to train our engine, fine-tuning hyperparameters to reduce error and improve prediction accuracy.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                             style="width: 90px;
+                                    height: 90px">
+                            <i class="fa fa-cogs fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3">5. Backend Integration</h4>
+                        <p class="mb-0">
+                            Exporting the trained model and integrating it with a Flask/Python backend to handle real-time prediction requests from the frontend.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                             style="width: 90px;
+                                    height: 90px">
+                            <i class="fa fa-cloud-upload-alt fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="mb-3">6. Web Deployment</h4>
+                        <p class="mb-0">
+                            Deploying the final application to a cloud server, making the prediction tool accessible to users through a modern, responsive UI.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+{% endblock  body %}
